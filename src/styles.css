@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif, “Apple Color Emoji”, “Segoe UI Emoji”, “Segoe UI Symbol”;
+}
+
+.p-breadcrumb {
+  background: #F4F6F9;
+  background: #fff;
+
+  border: 0px solid #dee2e6;
+  border-radius: 3px;
+  padding: 0.5rem;
+  color:red;
+}
+
+.p-breadcrumb .p-menuitem-text {
+  line-height: 1;
+  color: #000 !important;
+}
+
+
+
+
+.custominput {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  color: #1ab394 !important;
+  background: #ffffff;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid #ced4da;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+}

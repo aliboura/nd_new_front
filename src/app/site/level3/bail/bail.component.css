@@ -1,0 +1,103 @@
+
+label {
+  color:#000 ;
+  font-weight: 400 !important;
+}
+/*.p-inputtext{*/
+/*  ont-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
+/*  font-size: 1rem;*/
+/*  color: gray !important;*/
+/*  background: #ffffff;*/
+/*  padding: 0.5rem 0.5rem;*/
+/*  border: 1px solid #ced4da;*/
+/*  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;*/
+/*  -webkit-appearance: none;*/
+/*  appearance: none;*/
+/*  border-radius: 3px;*/
+
+/*}*/
+
+
+.custominput{
+  ont-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  color: darkblue !important;
+  background: #ffffff;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid #ced4da;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+
+}
+
+
+.customlabel {
+  color:red !important;
+  font-weight: 400 !important;
+}
+
+.p-cascadeselect .p-cascadeselect-label {
+  background: transparent;
+  border: 0 none;
+  padding: 0.5rem 0.5rem;
+  color: red !important;
+}
+.p-datepicker-calendar-container {
+  color:red;
+}
+
+.p-inputtext:enabled:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2rem #fff;
+  border-color: lightgray !important;
+}
+
+.p-inputtext:enabled:hover {
+  border-color: lightgray !important;
+}
+/*p-calendar {*/
+/* !* color:#000 !important;*!*/
+/*  font-weight: 400 !important;*/
+/*  color:red !important;*/
+/*}*/
+
+/*input {*/
+/*  color:#000 !important;*/
+/*  font-weight: 400 !important;*/
+/*}*/
+/*p-autocomplete {*/
+/*  color:red;*/
+/*}*/
+/*.p-component {*/
+
+/*  font-size: 1rem;*/
+/*  font-weight: 400 !important;*/
+/*  color:#000 !important;*/
+/*}*/
+
+
+
+/*.p-inputtext {*/
+/*  font-size: 1rem;*/
+/*  font-weight: 400;*/
+/*  line-height: 1.5;*/
+/*  color: #495057;*/
+/*  color: #000 !important;*/
+
+/*  background-color: #fff;*/
+/*  background-clip: padding-box;*/
+/*  border: 1px solid #ced4da;*/
+/*  border-radius: 0.25rem;*/
+
+/*  padding: 0.6rem 0.75rem;*/
+/*  border: 1px solid #ced4da;*/
+/*  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;*/
+/*  -webkit-appearance: none;*/
+/*  appearance: none;*/
+/*  border-radius: 6px;*/
+/*}*/
+
+

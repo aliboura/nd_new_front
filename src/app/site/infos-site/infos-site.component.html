@@ -1,0 +1,294 @@
+<app-site-header [id]="id"></app-site-header>
+
+<!-- Main content -->
+<section class="content">
+
+  <!-- Default box -->
+  <div class="card">
+    <div class="card-header">
+
+
+      <h5 class="card-title text-bold">Site Detail : {{id}}   / {{candidate.name}} ({{cand_id}})</h5>
+
+
+      <div class="card-tools">
+        <p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>
+
+<!--        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">-->
+<!--          <i class="fas fa-minus"></i>-->
+<!--        </button>-->
+<!--        <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">-->
+<!--          <i class="fas fa-times"></i>-->
+<!--        </button>-->
+      </div>
+    </div>
+
+
+    <div class="card-body">
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-9 order-2 order-md-1">
+
+
+
+
+          <!--new-->
+         <div class="row">
+          <div class="col-12">
+
+
+
+            <!-- Main content -->
+            <div class="invoice p-3 mb-3">
+
+              <div class="row no-print">
+                <div class="col-12">
+                  <a href="invoice-print.html" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-folder"></i> Level3</a>
+                  <a href="invoice-print.html" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-wifi"></i> Level4</a>
+
+
+                  <button type="button" class="btn btn-success float-right"><i class="fas fa-pen-square"></i> Edit Candidate
+
+                  </button>
+                  <a  role="button"                       routerLink="/site/edit"
+
+                      class="btn btn-primary float-right" style="margin-right: 5px;">
+                    <i class="fas fa-edit"></i>
+
+                    Edit Site
+                  </a>
+
+                </div>
+              </div>
+              <br>
+
+              <!-- title row -->
+
+<!--              <div class="row">-->
+<!--                <div class="col-12">-->
+<!--                  <h4>-->
+<!--                    <i class="fas fa-globe text-primary">-->
+<!--                      {{id}}-->
+<!--                    </i>-->
+
+<!--                    <small class="float-right">Date D1: 2/10/2014</small>-->
+<!--                  </h4>-->
+<!--                </div>-->
+<!--              </div>-->
+
+              <!-- info row -->
+
+              <div class="row invoice-info">
+                <div class="col-sm-6 invoice-col">
+<!--                  <p class="lead">Amount Due 2/22/2014</p>-->
+
+                  <div class="table-responsive">
+                    <table class="table">
+
+                      <tr>
+                        <th>Date D1:</th>
+                        <td>01/01/2022</td>
+                      </tr>
+
+                      <tr>
+                        <th>Type:</th>
+                        <td>{{currentSite.type}}</td>
+                      </tr>
+                      <tr>
+                        <th>Wilaya:</th>
+                        <td>{{currentSite.wilaya}}</td>
+                      </tr>
+
+                      <tr>
+                        <th>Region:</th>
+                        <td>{{currentSite.region}}</td>
+                      </tr>
+
+                      <tr>
+                        <th>Sharing:</th>
+                        <td>{{currentSite.otasharing}}</td>
+                      </tr>
+
+                      <tr>
+                      <th>Celule:</th>
+                      <td>{{currentSite.celule}}</td>
+                    </tr>
+
+                    </table>
+                  </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-6 invoice-col">
+<!--                  <p class="lead">Amount Due 2/22/2014</p>-->
+
+                  <div class="table-responsive">
+                    <table class="table">
+                      <tr>
+
+                        <th>Nom :</th>
+                        <td>{{candidate.name}}</td>
+                      </tr>
+                      <tr>
+
+                        <th>ID :</th>
+                        <td>{{candidate.id}}</td>
+                      </tr>
+
+                      <tr>
+                        <th>Adresse :</th>
+                        <td>{{candidate.adresse}}</td>
+                      </tr>
+                      <tr>
+                        <th>Commune:</th>
+                        <td>{{candidate.commune}}</td>
+                      </tr>
+                      <tr>
+                        <th>Position x:</th>
+                        <td>{{candidate.gps}}</td>
+                      </tr>
+
+                      <tr>
+                        <th>Position y:</th>
+                        <td>{{candidate.gpsY}}</td>
+                      </tr>
+
+                    </table>
+                  </div>
+                </div>
+                <!-- /.col -->
+
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+
+              <!-- Table row -->
+              <h2 class="lead">List Candidats:</h2>
+
+              <div class="row">
+                <div class="col-12 table-responsive">
+                  <table class="table table-striped">
+
+
+                    <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Name</th>
+                      <th>Adress #</th>
+                      <th>Comune</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let candidat of listCand">
+                      <td>{{candidat.id}}</td>
+                      <td>{{candidat.name}}</td>
+                      <td>{{candidat.adresse}}</td>
+                      <td>{{candidat.commune}}</td>
+                    </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+
+              <!-- /.row -->
+
+              <!-- this row will not appear when printing -->
+              <br>
+              <div class="row no-print">
+                <div class="col-12">
+                  <a href="invoice-print.html" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-folder"></i> Level3</a>
+                  <a href="invoice-print.html" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-wifi"></i> Level4</a>
+
+
+                  <button type="button" class="btn btn-success float-right"><i class="fas fa-pen-square"></i> Edit Candidate
+
+                  </button>
+<!--                  <button type="button" -->
+<!--                          class="btn btn-primary float-right" style="margin-right: 5px;">-->
+<!--                    <i class="fas fa-edit"></i> Edit Site-->
+<!--                  </button>-->
+
+
+                   <a  role="button"
+                      routerLink="/site/edit"
+
+                       class="btn btn-primary float-right" style="margin-right: 5px;">
+                     <i class="fas fa-edit"></i>
+
+                  Edit Site
+                  </a>
+
+                </div>
+              </div>
+
+
+            </div>
+            <!-- /.invoice -->
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+          <!--/ new-->
+        </div>
+        <div class="col-12 col-md-12 col-lg-3 order-1 order-md-2">
+          <h5 class="text-primary">
+            <i class="fas fa-paint-brush"></i> Level 3 </h5>
+
+          <div class="text-muted">
+            <p class="text-sm">
+              <b class="d-block">Bail :
+                <span class="text-success">OK</span></b>
+            </p>
+            <p class="text-sm">
+              <b class="d-block">Authentification :
+                <span class="text-success">OK</span></b>
+            </p>
+            <p class="text-sm">
+              <b class="d-block">Draft :
+                <span class="text-danger">NOT OK</span></b>
+            </p>
+
+            <p class="text-sm">
+              <b class="d-block">Electrification :
+                <span class="text-danger">NOT OK</span></b>
+            </p>
+            <p class="text-sm">
+              <b class="d-block">Construction :
+                <span class="text-danger">NOT OK</span></b>
+            </p>
+
+          </div>
+
+          <h5 class="text-primary">
+            <i class="fas fa-paint-brush"></i> Level 4 </h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="" class="btn-link text-secondary">
+<!--                <i class="far fa-fw fa-file-word"></i> -->
+                <i class="fa fa-wifi" aria-hidden="true"></i>
+                2G
+
+              </a>
+            </li>
+            <li>
+              <a href="" class="btn-link text-secondary">
+                <i class="fa fa-wifi" aria-hidden="true"></i> 3G</a>
+            </li>
+            <li>
+              <a href="" class="btn-link text-secondary">
+                <i class="fa fa-wifi" aria-hidden="true"></i> 4G</a>
+            </li>
+
+
+          </ul>
+          <div class="text-center mt-5 mb-3">
+            <a href="#" class="btn btn-sm btn-primary">Level 3</a>
+            <a href="#" class="btn btn-sm btn-warning">Level 4</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.card-body -->
+  </div>
+  <!-- /.card -->
+
+</section>

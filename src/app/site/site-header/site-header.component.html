@@ -1,0 +1,64 @@
+<section class="content-header">
+  <div class="container-fluid">
+
+
+    <!-- -->
+
+
+    <!-- -->
+
+
+    <div class="row mb-2">
+
+      <div class="col-sm-2">
+        <h5>Code : <span class="text-primary">{{sitecode}} </span> </h5>
+
+      </div>
+      <div class="col-sm-5">
+<!--        <option *ngFor="let wilaya of listWilaya"-->
+
+<!--                [value]="wilaya.name">-->
+<!--          {{wilaya.id+"-"+wilaya.name}}-->
+
+<!--        </option>-->
+<!--        <a class="btn btn-primary" href="#" role="button">Link</a>-->
+
+        <!--            [routerLink]="['/site/cand/{{sitecode}}']"-->
+
+        <a  role="button" *ngFor="let candidat of listCand"
+            routerLink="/site/cand/{{sitecode}}"
+
+            [queryParams]="{idcandidate: candidat.id}" class="btn btn-xs" [ngClass]="candidat.activeCandidate ? 'btn btn-xs btn-success' : 'btn btn-outline-secondary btn-xs'">
+
+           {{candidat.name}}
+        </a>
+        &nbsp; | &nbsp;
+        <!--          <button type="button" class="btn btn-outline-info btn-xs">2G</button>-->
+        <!--          <button type="button" class="btn btn-outline-info btn-xs">3G</button>-->
+        <!--          <button type="button" class="btn btn-outline-info btn-xs">4G</button>-->
+
+        <div class="btn-group">
+          <button type="button" class="btn btn-default btn-xs">2G</button>
+          <button type="button" class="btn btn-default btn-xs">3G</button>
+          <button type="button" class="btn btn-default btn-xs">4G</button>
+        </div>
+      </div>
+      <div class="col-sm-5">
+
+
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">S-Deployment :
+            <span class="text-success">Offline</span></li>
+          <li class="breadcrumb-item active">Status :
+            <span class="text-success">Active</span>
+          </li>
+
+
+
+
+        </ol>
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>

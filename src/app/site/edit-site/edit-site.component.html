@@ -1,0 +1,176 @@
+<div class="container-fluid">
+
+  <div class="container">
+
+
+    <!-- Title -->
+    <form #siteForm="ngForm" (ngSubmit)="submit(siteForm)">
+
+      <div class="d-flex justify-content-between align-items-lg-center py-3 flex-column flex-lg-row">
+        <h2 class="h5 mb-3 mb-lg-0"><a href="../../pages/admin/customers.html" class="text-muted"><i class="bi bi-arrow-left-square me-2"></i></a> Edit site</h2>
+        <div class="hstack gap-3">
+          <button type="reset" class="btn btn-light btn-md btn-icon-text"><i class="bi bi-x"></i> <span class="text">Cancel</span></button>
+
+          <button type="submit" class="btn btn-primary btn-md btn-icon-text"><i class="bi bi-save"></i> <span class="text">Save</span></button>
+        </div>
+      </div>
+
+      <!-- Main content -->
+
+      <div class="row">
+
+        <!-- Left side -->
+        <div class="col-lg-8">
+          <!-- Basic information -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <!--            <h3 class="h6 mb-4">Basic information</h3>-->
+              <!--            <p>{{siteForm.value|json}}</p>-->
+              <!--             <hr>-->
+              <h2>code : {{siteDto.code}} </h2>
+              <hr>
+              <!--            <p>{{siteDto|json}}</p>-->
+              <input type="hidden" class="form-control" name="code"
+                     [(ngModel)]="siteDto.code">
+
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Wilya</label>
+                    <select class="form-control"
+                            #wilaya
+                            (ngModelChange)="onChangeWilaya(wilaya.value)"
+                            name="wilaya" [(ngModel)]="siteDto.wilaya">
+
+                      <option *ngFor="let wilaya of listWilaya"
+
+                              [value]="wilaya.name">
+                        {{wilaya.id+"-"+wilaya.name}}
+
+                      </option>
+
+                    </select>
+
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Type</label>
+                    <select class="form-control"
+                            name="type" [(ngModel)]="siteDto.type">
+
+                      <option *ngFor="let type of listSiteTypes" [value]="type">
+                        {{type}}
+                      </option>
+
+                    </select>                </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">N° Site</label>
+                    <input type="number" class="form-control" name="numero"
+                           [(ngModel)]="siteDto.numero">
+
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Nom Site</label>
+                    <input type="text" class="form-control" name="nom"
+                           [(ngModel)]="siteDto.nom">                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Address -->
+          <div class="card mb-4">
+            <div class="card-body">
+
+
+
+              <h3 class="h6">Comment</h3>
+              <textarea  class="form-control" rows="3"
+                         name="siteComment" [(ngModel)]="siteDto.siteComment">
+
+                </textarea>
+
+
+
+            </div>
+          </div>
+        </div>
+        <!-- Right side -->
+        <div class="col-lg-4">
+          <!-- Status -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h3 class="h6">OTA Sharing</h3>
+              <div class="form-group">
+                <!--              <label>Select</label>-->
+                <select class="form-control"
+                        name="otasharing" [(ngModel)]="siteDto.otasharing">
+                  <option>OTA</option>
+                  <option>Sharing</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- Avatar -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h3 class="h6">Celule</h3>
+              <div class="form-group">
+                <!--              <label>Select</label>-->
+                <select class="form-control"
+                        name="celule" [(ngModel)]="siteDto.celule">
+                  <option>P1</option>
+                  <option>P2</option>
+                  <option>P3</option>
+                  <option>P4</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- Notes -->
+
+          <!-- Notification settings -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h3 class="h6">Notification Settings</h3>
+              <ul class="list-group list-group-flush mx-n2">
+                <li class="list-group-item px-0 d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <h6 class="mb-0">Important Site</h6>
+                    <small>Site to be reported as very important .</small>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input name="importantSite" [(ngModel)]="siteDto.importantSite"
+                           class="form-check-input" type="checkbox" role="switch">
+                  </div>
+                </li>
+                <li class="list-group-item px-0 d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <h6 class="mb-0">ANF </h6>
+                    <small>notification about ANF status.</small>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input"
+                           name="reminderAnf" [(ngModel)]="siteDto.reminderAnf"
+                           type="checkbox" role="switch" checked="">
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </form>
+  </div>
+
+</div>
